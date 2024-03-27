@@ -32,7 +32,6 @@ public class ShopManagerScript : MonoBehaviour
     public void Buy()
     {
         GameObject ButtonRef = GameObject.FindGameObjectWithTag("Event").GetComponent<EventSystem>().currentSelectedGameObject;
-        
         if (MoneyClicker.money >= shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID] && shopItems[3, ButtonRef.GetComponent<ButtonInfo>().ItemID] > 0)
         {
             MoneyClicker.money -= shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID];
