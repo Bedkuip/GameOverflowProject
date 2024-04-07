@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.InputSystem;
 
 [ExecuteInEditMode()]
 public class Tooltip : MonoBehaviour
@@ -28,6 +29,7 @@ public class Tooltip : MonoBehaviour
             layoutElement.enabled = Math.Max(headerField.preferredWidth, contentField.preferredWidth) >= layoutElement.preferredWidth;
         }
         Vector2 position = Input.mousePosition;
+        //Vector2 position = Mouse.current.position.ReadValue();
         float pivotX = position.x / Screen.width;
         float pivotY = position.y / Screen.height;
         rectTransform.pivot = new Vector2(pivotX, pivotY);
