@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class HealthManager : MonoBehaviour
 {
@@ -10,7 +9,7 @@ public class HealthManager : MonoBehaviour
     public float healthValue = 100.0f;
     private const float healthDropOverTime = 0.5f;
     public FoodManager FoodManager;
-    public TextMeshProUGUI healthPercentage;
+    public TMPro.TextMeshProUGUI healthPercentage;
     // Start is called before the first frame update
     void Start()
     {
