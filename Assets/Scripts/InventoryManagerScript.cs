@@ -53,8 +53,6 @@ using TMPro;
 public class InventoryManagerScript : MonoBehaviour
 {
     public int[,] inventoryItems = new int[5, 5];
-    public TextMeshProUGUI MoneyTXTnumber;
-    public CoinClicker MoneyClicker;
 
     void Start()
     {
@@ -78,7 +76,7 @@ public class InventoryManagerScript : MonoBehaviour
         inventoryItems[3, 4] = 0;
     }
 
-    public void Buy(int id)
+    public void Use(int id)
     {
         GameObject ButtonInfo = GameObject.FindGameObjectWithTag("Event").GetComponent<EventSystem>().currentSelectedGameObject;
 
