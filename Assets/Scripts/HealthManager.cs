@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,15 +5,9 @@ public class HealthManager : MonoBehaviour
 {
     public Image healthBar;
     public float healthValue = 100.0f;
-    private const float healthDropOverTime = 0.5f;
+    private const float healthDropOverTime = 5.0f; //0.5f;
     public FoodManager FoodManager;
     public TMPro.TextMeshProUGUI healthPercentage;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-    // Update is called once per frame
     void Update()
     {
         if (FoodManager.foodValue <= 1 && healthValue > 0)
@@ -23,7 +15,7 @@ public class HealthManager : MonoBehaviour
             healthValue -= healthDropOverTime * Time.deltaTime;
         }
         healthBar.fillAmount = healthValue / 100.0f;
-        string foodPercentageText = $"{((int)healthValue).ToString()}%";
+        string foodPercentageText = $"{(int)healthValue}%";
         healthPercentage.SetText(foodPercentageText);
     }
 }

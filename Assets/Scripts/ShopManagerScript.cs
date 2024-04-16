@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
 using TMPro;
 
 public class ShopManagerScript : MonoBehaviour
@@ -12,7 +9,6 @@ public class ShopManagerScript : MonoBehaviour
     public CoinClicker MoneyClicker;
     void Start()
     {
-        //MoneyTXTnumber.text = MoneyClicker.money.ToString();
         // ID
         shopItems[1, 1] = 1;
         shopItems[1, 2] = 2;
