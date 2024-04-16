@@ -2804,7 +2804,7 @@ GameObject:
   - component: {fileID: 517361059}
   - component: {fileID: 517361058}
   - component: {fileID: 517361057}
-  - component: {fileID: 517361056}
+  - component: {fileID: 517361060}
   m_Layer: 5
   m_Name: Item3
   m_TagString: Untagged
@@ -2833,22 +2833,6 @@ RectTransform:
   m_AnchoredPosition: {x: 312.5, y: -207.5}
   m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &517361056
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 517361054}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f1c3e85dc95d7640a3dfce4f8b3068b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ItemID: 3
-  PriceTXT: {fileID: 0}
-  QuantityTXT: {fileID: 450993472}
-  ShopManager: {fileID: 919732653}
 --- !u!114 &517361057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2893,9 +2877,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: c6f91d8a1c208764f9b71fdbcecd5d03, type: 3}
-        m_TargetAssemblyTypeName: ShopManagerScript, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 919732654}
+        m_TargetAssemblyTypeName: InventoryManagerScript, ScriptAssembly
+        m_MethodName: Move
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2943,6 +2927,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 517361054}
   m_CullTransparentMesh: 1
+--- !u!114 &517361060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517361054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be49f1bc8f77af043ab107c09f1a45f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemID: 3
+  QuantityTXT: {fileID: 450993472}
+  InventoryManager: {fileID: 919732653}
 --- !u!1 &530984484
 GameObject:
   m_ObjectHideFlags: 0
@@ -3088,7 +3087,7 @@ GameObject:
   - component: {fileID: 533077791}
   - component: {fileID: 533077790}
   - component: {fileID: 533077789}
-  - component: {fileID: 533077788}
+  - component: {fileID: 533077792}
   m_Layer: 5
   m_Name: Item1
   m_TagString: Untagged
@@ -3117,22 +3116,6 @@ RectTransform:
   m_AnchoredPosition: {x: 62.5, y: -207.5}
   m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &533077788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 533077786}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f1c3e85dc95d7640a3dfce4f8b3068b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ItemID: 1
-  PriceTXT: {fileID: 0}
-  QuantityTXT: {fileID: 54461463}
-  ShopManager: {fileID: 919732653}
 --- !u!114 &533077789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3177,9 +3160,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: c6f91d8a1c208764f9b71fdbcecd5d03, type: 3}
-        m_TargetAssemblyTypeName: ShopManagerScript, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 919732654}
+        m_TargetAssemblyTypeName: InventoryManagerScript, ScriptAssembly
+        m_MethodName: Move
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3227,6 +3210,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 533077786}
   m_CullTransparentMesh: 1
+--- !u!114 &533077792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533077786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be49f1bc8f77af043ab107c09f1a45f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemID: 1
+  QuantityTXT: {fileID: 54461463}
+  InventoryManager: {fileID: 919732653}
 --- !u!1 &538421267
 GameObject:
   m_ObjectHideFlags: 0
@@ -4667,6 +4665,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6f91d8a1c208764f9b71fdbcecd5d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MoneyTXTnumber: {fileID: 1105599208}
+  MoneyClicker: {fileID: 1149824260}
 --- !u!4 &919732655
 Transform:
   m_ObjectHideFlags: 0
@@ -5348,7 +5348,7 @@ GameObject:
   - component: {fileID: 1110531546}
   - component: {fileID: 1110531545}
   - component: {fileID: 1110531544}
-  - component: {fileID: 1110531543}
+  - component: {fileID: 1110531547}
   m_Layer: 5
   m_Name: Item4
   m_TagString: Untagged
@@ -5377,22 +5377,6 @@ RectTransform:
   m_AnchoredPosition: {x: 437.5, y: -207.5}
   m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1110531543
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1110531541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f1c3e85dc95d7640a3dfce4f8b3068b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ItemID: 4
-  PriceTXT: {fileID: 0}
-  QuantityTXT: {fileID: 100715063}
-  ShopManager: {fileID: 919732653}
 --- !u!114 &1110531544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5437,9 +5421,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: c6f91d8a1c208764f9b71fdbcecd5d03, type: 3}
-        m_TargetAssemblyTypeName: ShopManagerScript, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 919732654}
+        m_TargetAssemblyTypeName: InventoryManagerScript, ScriptAssembly
+        m_MethodName: Move
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5487,6 +5471,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1110531541}
   m_CullTransparentMesh: 1
+--- !u!114 &1110531547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110531541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be49f1bc8f77af043ab107c09f1a45f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemID: 4
+  QuantityTXT: {fileID: 100715063}
+  InventoryManager: {fileID: 919732653}
 --- !u!1 &1135496584
 GameObject:
   m_ObjectHideFlags: 0
@@ -8836,7 +8835,7 @@ GameObject:
   - component: {fileID: 1726958702}
   - component: {fileID: 1726958701}
   - component: {fileID: 1726958700}
-  - component: {fileID: 1726958699}
+  - component: {fileID: 1726958703}
   m_Layer: 5
   m_Name: Item2
   m_TagString: Untagged
@@ -8865,22 +8864,6 @@ RectTransform:
   m_AnchoredPosition: {x: 187.5, y: -207.5}
   m_SizeDelta: {x: 120, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1726958699
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1726958697}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f1c3e85dc95d7640a3dfce4f8b3068b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ItemID: 2
-  PriceTXT: {fileID: 0}
-  QuantityTXT: {fileID: 395229137}
-  ShopManager: {fileID: 919732653}
 --- !u!114 &1726958700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8925,9 +8908,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: c6f91d8a1c208764f9b71fdbcecd5d03, type: 3}
-        m_TargetAssemblyTypeName: ShopManagerScript, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 919732654}
+        m_TargetAssemblyTypeName: InventoryManagerScript, ScriptAssembly
+        m_MethodName: Move
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8975,6 +8958,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1726958697}
   m_CullTransparentMesh: 1
+--- !u!114 &1726958703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726958697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be49f1bc8f77af043ab107c09f1a45f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemID: 2
+  QuantityTXT: {fileID: 395229137}
+  InventoryManager: {fileID: 919732653}
 --- !u!1 &1740533976
 GameObject:
   m_ObjectHideFlags: 0

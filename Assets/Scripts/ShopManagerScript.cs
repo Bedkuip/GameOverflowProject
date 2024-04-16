@@ -10,6 +10,8 @@ public class ShopManagerScript : MonoBehaviour
     public int[,] shopItems = new int[5,5];
     public TextMeshProUGUI MoneyTXTnumber;
     public CoinClicker MoneyClicker;
+    public InventoryManagerScript inventoryManager;
+
     void Start()
     {
         //MoneyTXTnumber.text = MoneyClicker.money.ToString();
@@ -32,12 +34,20 @@ public class ShopManagerScript : MonoBehaviour
     public void Buy()
     {
         GameObject ButtonRef = GameObject.FindGameObjectWithTag("Event").GetComponent<EventSystem>().currentSelectedGameObject;
+
         if (MoneyClicker.money >= shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID] && shopItems[3, ButtonRef.GetComponent<ButtonInfo>().ItemID] > 0)
         {
             MoneyClicker.money -= shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID];
             shopItems[3, ButtonRef.GetComponent<ButtonInfo>().ItemID]--;
             MoneyTXTnumber.text = MoneyClicker.money.ToString();
             ButtonRef.GetComponent<ButtonInfo>().QuantityTXT.text = shopItems[3, ButtonRef.GetComponent<ButtonInfo>().ItemID].ToString();
+            //inventoryManager.Buy(shopItems[3, ButtonRef.GetComponent<ButtonInfo>().ItemID]);
+
+            //targetButton.GetComponent<ButtonInfo>().QuantityTXT.text = shopItems[3, ItemID].ToString();
         }
+    }
+    public void Move()
+    {
+        GameObject gameObject = GameObject.Find("Item1");
     }
 }
