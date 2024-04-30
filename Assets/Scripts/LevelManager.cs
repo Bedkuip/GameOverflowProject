@@ -9,3 +9,13 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 }
+public class MusicController : MonoBehaviour
+{
+    private AudioSource backgroundMusic;
+
+    private void Start()
+    {
+        backgroundMusic = GameObject.Find("BackgroundMusic").GetComponent<AudioSource>();
+        backgroundMusic.Play();
+    }
+}
