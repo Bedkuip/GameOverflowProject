@@ -4,7 +4,7 @@ using TMPro;
 
 public class ShopManagerScript : MonoBehaviour
 {
-    public int[,] shopItems = new int[6,6];
+    public int[,] shopItems = new int[7,7];
     public TextMeshProUGUI MoneyTXTnumber;
     public CoinClicker MoneyClicker;
     public InventoryManagerScript InvManager;
@@ -17,18 +17,21 @@ public class ShopManagerScript : MonoBehaviour
         shopItems[1, 3] = 3;
         shopItems[1, 4] = 4;
         shopItems[1, 5] = 5;
+        shopItems[1, 6] = 6;
         // Price
         shopItems[2, 1] = 10;   // Sushi
         shopItems[2, 2] = 3;    // Apple
         shopItems[2, 3] = 5;    // Candy
         shopItems[2, 4] = 8;    // Coffee
-        shopItems[2, 5] = 15;   // Medicine
+        shopItems[2, 5] = 15;   // Pill
+        shopItems[2, 6] = 25;   // Health potion
         // Quantity
         shopItems[3, 1] = 99;
         shopItems[3, 2] = 99;
         shopItems[3, 3] = 99;
         shopItems[3, 4] = 99;
         shopItems[3, 5] = 99;
+        shopItems[3, 6] = 99;
         // Set money spent to 0
         totalMoneySpent = 0;
     }
