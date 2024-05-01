@@ -1,90 +1,59 @@
-/*using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
 using TMPro;
 
 public class InventoryManagerScript : MonoBehaviour
 {
-    public int[,] inventoryItems = new int[5,5];
-    public TextMeshProUGUI MoneyTXTnumber;
-    public CoinClicker MoneyClicker;
+    public int[,] inventoryItems = new int[6,6];
+    public ShopManagerScript ShopManager;
+    public FoodManager FoodManager;
+    public HealthManager HealthManager;
+    public HappinessManager HappinessManager;
     void Start()
     {
-        //MoneyTXTnumber.text = MoneyClicker.money.ToString();
         // ID
         inventoryItems[1, 1] = 1;
         inventoryItems[1, 2] = 2;
         inventoryItems[1, 3] = 3;
         inventoryItems[1, 4] = 4;
-        
-        // Price
-        inventoryItems[2, 1] = 0;
-        inventoryItems[2, 2] = 0;
-        inventoryItems[2, 3] = 0;
-        inventoryItems[2, 4] = 0;
+        inventoryItems[1, 5] = 5;
+        // Stat increase
+        inventoryItems[2, 1] = 30;
+        inventoryItems[2, 2] = 15;
+        inventoryItems[2, 3] = 10;
+        inventoryItems[2, 4] = 20;
+        inventoryItems[2, 5] = 25;
         //Quantity
         inventoryItems[3, 1] = 0;
         inventoryItems[3, 2] = 0;
         inventoryItems[3, 3] = 0;
         inventoryItems[3, 4] = 0;
+        inventoryItems[3, 5] = 0;
     }
-    public void Move() // prev Buy
+    public void Add(int buttonID)
     {
-        GameObject ButtonInfo = GameObject.FindGameObjectWithTag("Event").GetComponent<EventSystem>().currentSelectedGameObject;
-        
-        if (MoneyClicker.money >= inventoryItems[2, ButtonInfo.GetComponent<ButtonInfo>().ItemID] && inventoryItems[3, ButtonInfo.GetComponent<ButtonInfo>().ItemID] > 0)
+        inventoryItems[3, buttonID]++;
+    }
+    public void Use()
+    {
+        GameObject CurrentButton = GameObject.FindGameObjectWithTag("Event").GetComponent<EventSystem>().currentSelectedGameObject;
+        if (inventoryItems[3, CurrentButton.GetComponent<ButtonInventoryUpdate>().ItemID] > 0)
         {
-            //MoneyClicker.money -= inventoryItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID];
-            inventoryItems[3, ButtonInfo.GetComponent<ButtonInventoryUpdate>().ItemID]++;
-            //MoneyTXTnumber.text = MoneyClicker.money.ToString();
-            ButtonInfo.GetComponent<ButtonInventoryUpdate>().QuantityTXT.text = inventoryItems[3, ButtonInfo.GetComponent<ButtonInventoryUpdate>().ItemID].ToString();
+            inventoryItems[3, CurrentButton.GetComponent<ButtonInventoryUpdate>().ItemID]--;
+            if (CurrentButton.GetComponent<ButtonInventoryUpdate>().ItemID == 5)
+            {
+                if (HealthManager.healthValue < 100)
+                {
+                    HealthManager.healthValue += inventoryItems[2, CurrentButton.GetComponent<ButtonInventoryUpdate>().ItemID];
+                }
+            }
+            else
+            {
+                if (FoodManager.foodValue < 100)
+                {
+                    FoodManager.foodValue += inventoryItems[2, CurrentButton.GetComponent<ButtonInventoryUpdate>().ItemID];
+                }
+            }
         }
-        
-    }
-}
-*/
-using UnityEngine.EventSystems;
-using UnityEngine.UI;
-using UnityEngine;
-using TMPro;
-
-public class InventoryManagerScript : MonoBehaviour
-{
-    public int[,] inventoryItems = new int[5, 5];
-
-    void Start()
-    {
-        // Initialize your inventory items here (ID, Price, Quantity, etc.)
-        // ...
-
-        // Example initialization:
-        inventoryItems[1, 1] = 1;
-        inventoryItems[1, 2] = 2;
-        inventoryItems[1, 3] = 3;
-        inventoryItems[1, 4] = 4;
-        // Price
-        inventoryItems[2, 1] = 0;
-        inventoryItems[2, 2] = 0;
-        inventoryItems[2, 3] = 0;
-        inventoryItems[2, 4] = 0;
-        //Quantity
-        inventoryItems[3, 1] = 0;
-        inventoryItems[3, 2] = 0;
-        inventoryItems[3, 3] = 0;
-        inventoryItems[3, 4] = 0;
-    }
-
-    public void Use(int id)
-    {
-        GameObject ButtonInfo = GameObject.FindGameObjectWithTag("Event").GetComponent<EventSystem>().currentSelectedGameObject;
-
-        int itemID = id;//ButtonInfo.GetComponent<ButtonInfo>().ItemID;
-        // Increase quantity by 1
-        inventoryItems[3, itemID]++;
-
-        // Update UI (assuming you have a Text component for displaying quantity)
-        ButtonInfo.GetComponent<ButtonInventoryUpdate>().QuantityTXT.text = inventoryItems[3, itemID].ToString();
     }
 }
