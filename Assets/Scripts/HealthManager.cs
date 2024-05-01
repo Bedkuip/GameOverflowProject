@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class HealthManager : MonoBehaviour
@@ -21,5 +22,9 @@ public class HealthManager : MonoBehaviour
         healthBar.fillAmount = healthValue / 100.0f;
         string foodPercentageText = $"{(int)healthValue}%";
         healthPercentage.SetText(foodPercentageText);
+        if (healthValue <= 0)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
     }
 }

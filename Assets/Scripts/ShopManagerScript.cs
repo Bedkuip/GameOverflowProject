@@ -8,6 +8,7 @@ public class ShopManagerScript : MonoBehaviour
     public TextMeshProUGUI MoneyTXTnumber;
     public CoinClicker MoneyClicker;
     public InventoryManagerScript InvManager;
+    public static int totalMoneySpent;
     void Start()
     {
         // ID
@@ -22,12 +23,14 @@ public class ShopManagerScript : MonoBehaviour
         shopItems[2, 3] = 5;    // Candy
         shopItems[2, 4] = 8;    // Coffee
         shopItems[2, 5] = 15;   // Medicine
-        //Quantity
+        // Quantity
         shopItems[3, 1] = 99;
         shopItems[3, 2] = 99;
         shopItems[3, 3] = 99;
         shopItems[3, 4] = 99;
         shopItems[3, 5] = 99;
+        // Set money spent to 0
+        totalMoneySpent = 0;
     }
     public void Buy()
     {
@@ -35,6 +38,7 @@ public class ShopManagerScript : MonoBehaviour
         if (MoneyClicker.money >= shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID] && shopItems[3, ButtonRef.GetComponent<ButtonInfo>().ItemID] > 0)
         {
             MoneyClicker.money -= shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID];
+            totalMoneySpent += shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID];
             shopItems[3, ButtonRef.GetComponent<ButtonInfo>().ItemID]--;
             MoneyTXTnumber.text = MoneyClicker.money.ToString();
             InvManager.Add(ButtonRef.GetComponent<ButtonInfo>().ItemID);
