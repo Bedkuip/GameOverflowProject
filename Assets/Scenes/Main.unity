@@ -1074,7 +1074,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4431373, g: 0.74510336, b: 1, a: 0.32941177}
+  m_Color: {r: 0.4431373, g: 0.74510336, b: 1, a: 0.5882353}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1530,6 +1530,7 @@ GameObject:
   - component: {fileID: 325088284}
   - component: {fileID: 325088283}
   - component: {fileID: 325088282}
+  - component: {fileID: 325088286}
   m_Layer: 5
   m_Name: Item4
   m_TagString: Untagged
@@ -1617,10 +1618,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1395406812}
         m_TargetAssemblyTypeName: InventoryManagerScript, ScriptAssembly
         m_MethodName: Use
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1667,6 +1668,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 325088280}
   m_CullTransparentMesh: 1
+--- !u!114 &325088286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325088280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e075908541964e04f80ebf06d13d2071, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  header: Coffee
+  content: Use to increase fullness by 30% and happiness by 20%
 --- !u!1 &374810872
 GameObject:
   m_ObjectHideFlags: 0
@@ -2025,6 +2040,7 @@ GameObject:
   - component: {fileID: 388928983}
   - component: {fileID: 388928982}
   - component: {fileID: 388928981}
+  - component: {fileID: 388928985}
   m_Layer: 5
   m_Name: Item1
   m_TagString: Untagged
@@ -2112,10 +2128,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1395406812}
         m_TargetAssemblyTypeName: InventoryManagerScript, ScriptAssembly
         m_MethodName: Use
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2162,6 +2178,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 388928979}
   m_CullTransparentMesh: 1
+--- !u!114 &388928985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388928979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e075908541964e04f80ebf06d13d2071, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  header: Sushi
+  content: Use to increase fullness by 40% and happiness by 20%
 --- !u!1 &400089895
 GameObject:
   m_ObjectHideFlags: 0
@@ -2421,7 +2451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5882353}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2554,7 +2584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.4431373, b: 0.9900667, a: 0.32941177}
+  m_Color: {r: 1, g: 0.4431373, b: 0.9900667, a: 0.5882353}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3640,8 +3670,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 83.255, y: -18.005}
-  m_SizeDelta: {x: 166.51, y: 36.01}
+  m_AnchoredPosition: {x: 69.38, y: -15.005}
+  m_SizeDelta: {x: 138.76, y: 30.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &697880175
 MonoBehaviour:
@@ -3672,8 +3702,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4278244040
+  m_fontColor: {r: 0.78431374, g: 0.8235294, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3690,8 +3720,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5245,6 +5275,7 @@ GameObject:
   - component: {fileID: 1103417066}
   - component: {fileID: 1103417065}
   - component: {fileID: 1103417064}
+  - component: {fileID: 1103417068}
   m_Layer: 5
   m_Name: Item4
   m_TagString: Untagged
@@ -5384,6 +5415,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1103417062}
   m_CullTransparentMesh: 1
+--- !u!114 &1103417068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103417062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e075908541964e04f80ebf06d13d2071, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  header: Coffee
+  content: Food item - increases your pet's fullness by 30%
 --- !u!1 &1105599207
 GameObject:
   m_ObjectHideFlags: 0
@@ -5838,7 +5883,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5882353}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5913,7 +5958,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5882353}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6072,6 +6117,7 @@ GameObject:
   - component: {fileID: 1152999449}
   - component: {fileID: 1152999448}
   - component: {fileID: 1152999447}
+  - component: {fileID: 1152999451}
   m_Layer: 5
   m_Name: Item2
   m_TagString: Untagged
@@ -6211,6 +6257,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1152999445}
   m_CullTransparentMesh: 1
+--- !u!114 &1152999451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1152999445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e075908541964e04f80ebf06d13d2071, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  header: Apple
+  content: Food item - increases your pet's fullness by 15%
 --- !u!1 &1158999687
 GameObject:
   m_ObjectHideFlags: 0
@@ -6728,9 +6788,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -29.768494, y: 606.6814}
-  m_SizeDelta: {x: 166.51, y: 72.02}
-  m_Pivot: {x: 0.48449558, y: 1.0617421}
+  m_AnchoredPosition: {x: -32.035828, y: 594.1908}
+  m_SizeDelta: {x: 138.76, y: 56.02}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1209172562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6784,7 +6844,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.19607843}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.49019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6824,7 +6884,7 @@ MonoBehaviour:
   m_IgnoreLayout: 0
   m_MinWidth: -1
   m_MinHeight: -1
-  m_PreferredWidth: 500
+  m_PreferredWidth: 200
   m_PreferredHeight: -1
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
@@ -6844,7 +6904,7 @@ MonoBehaviour:
   headerField: {fileID: 697880175}
   contentField: {fileID: 1813307661}
   layoutElement: {fileID: 1209172566}
-  characterWrapLimit: 0
+  characterWrapLimit: 200
   rectTransform: {fileID: 1209172561}
 --- !u!1 &1213497869
 GameObject:
@@ -7748,6 +7808,7 @@ GameObject:
   - component: {fileID: 1410395904}
   - component: {fileID: 1410395903}
   - component: {fileID: 1410395902}
+  - component: {fileID: 1410395906}
   m_Layer: 5
   m_Name: Item3
   m_TagString: Untagged
@@ -7887,6 +7948,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1410395900}
   m_CullTransparentMesh: 1
+--- !u!114 &1410395906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410395900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e075908541964e04f80ebf06d13d2071, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  header: Candy
+  content: Food item - increases your pet's fullness by 20%
 --- !u!1 &1412322631
 GameObject:
   m_ObjectHideFlags: 0
@@ -7900,6 +7975,7 @@ GameObject:
   - component: {fileID: 1412322635}
   - component: {fileID: 1412322634}
   - component: {fileID: 1412322633}
+  - component: {fileID: 1412322637}
   m_Layer: 5
   m_Name: Item2
   m_TagString: Untagged
@@ -7987,10 +8063,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1395406812}
         m_TargetAssemblyTypeName: InventoryManagerScript, ScriptAssembly
         m_MethodName: Use
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -8037,6 +8113,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1412322631}
   m_CullTransparentMesh: 1
+--- !u!114 &1412322637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412322631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e075908541964e04f80ebf06d13d2071, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  header: Apple
+  content: Use to increase fullness by 15% and happiness by 20%
 --- !u!1 &1438562769
 GameObject:
   m_ObjectHideFlags: 0
@@ -8892,6 +8982,7 @@ GameObject:
   - component: {fileID: 1550732717}
   - component: {fileID: 1550732716}
   - component: {fileID: 1550732715}
+  - component: {fileID: 1550732719}
   m_Layer: 5
   m_Name: Item5
   m_TagString: Untagged
@@ -8979,9 +9070,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1395406810}
-        m_TargetAssemblyTypeName: ShopManagerScript, Assembly-CSharp
-        m_MethodName: Buy
+      - m_Target: {fileID: 1395406812}
+        m_TargetAssemblyTypeName: InventoryManagerScript, ScriptAssembly
+        m_MethodName: Use
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9029,6 +9120,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1550732713}
   m_CullTransparentMesh: 1
+--- !u!114 &1550732719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550732713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e075908541964e04f80ebf06d13d2071, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  header: Medicine
+  content: Use to increase health by 25% and happiness by 20%
 --- !u!1 &1564753060
 GameObject:
   m_ObjectHideFlags: 0
@@ -9119,7 +9224,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   header: Health
-  content: If the pet is starving, the health value decreases by 5 points every second
+  content: 'If the pet is starving, the health decreases by 5% every second
+
+    Can
+    be increased using medicine'
 --- !u!1 &1583070056
 GameObject:
   m_ObjectHideFlags: 0
@@ -9210,7 +9318,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   header: Food
-  content: The food value decreases by 10 points every second
+  content: 'The food decreases by 7.5% every second
+
+    Can be increased using
+    food'
 --- !u!1 &1605763368
 GameObject:
   m_ObjectHideFlags: 0
@@ -9364,7 +9475,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4716981, g: 0.4716981, b: 0.4716981, a: 0.28235295}
+  m_Color: {r: 0.4716981, g: 0.4716981, b: 0.4716981, a: 0.49019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9931,8 +10042,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 83.255, y: -54.015}
-  m_SizeDelta: {x: 166.51, y: 36.01}
+  m_AnchoredPosition: {x: 60.13, y: -43.015}
+  m_SizeDelta: {x: 120.26, y: 26.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1813307661
 MonoBehaviour:
@@ -9981,8 +10092,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 26
+  m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -10312,7 +10423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.4431373, b: 0.9900667, a: 0.32941177}
+  m_Color: {r: 1, g: 0.4431373, b: 0.9900667, a: 0.5882353}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -10427,8 +10538,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   header: Happiness
-  content: If the pet is hungry, the happiness value decreases by 10 points every
-    second
+  content: 'If the pet is hungry, the happiness decreases by 5% every second
+
+    Can
+    be increased using food and medicine'
 --- !u!1 &1954558038
 GameObject:
   m_ObjectHideFlags: 0
@@ -10901,6 +11014,7 @@ GameObject:
   - component: {fileID: 2010964972}
   - component: {fileID: 2010964971}
   - component: {fileID: 2010964970}
+  - component: {fileID: 2010964974}
   m_Layer: 5
   m_Name: Item3
   m_TagString: Untagged
@@ -10988,10 +11102,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1395406812}
         m_TargetAssemblyTypeName: InventoryManagerScript, ScriptAssembly
         m_MethodName: Use
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -11038,6 +11152,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2010964968}
   m_CullTransparentMesh: 1
+--- !u!114 &2010964974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010964968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e075908541964e04f80ebf06d13d2071, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  header: Candy
+  content: Use to increase fullness by 20% and happiness by 20%
 --- !u!1 &2018935997
 GameObject:
   m_ObjectHideFlags: 0
@@ -11196,6 +11324,7 @@ GameObject:
   - component: {fileID: 2050959057}
   - component: {fileID: 2050959056}
   - component: {fileID: 2050959055}
+  - component: {fileID: 2050959059}
   m_Layer: 5
   m_Name: Item1
   m_TagString: Untagged
@@ -11335,6 +11464,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2050959053}
   m_CullTransparentMesh: 1
+--- !u!114 &2050959059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050959053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e075908541964e04f80ebf06d13d2071, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  header: Sushi
+  content: Food item - increases your pet's fullness by 40%
 --- !u!1 &2052112209
 GameObject:
   m_ObjectHideFlags: 0
@@ -11547,6 +11690,7 @@ GameObject:
   - component: {fileID: 2114540676}
   - component: {fileID: 2114540675}
   - component: {fileID: 2114540674}
+  - component: {fileID: 2114540678}
   m_Layer: 5
   m_Name: Item5
   m_TagString: Untagged
@@ -11686,6 +11830,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2114540672}
   m_CullTransparentMesh: 1
+--- !u!114 &2114540678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114540672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e075908541964e04f80ebf06d13d2071, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  header: Medicine
+  content: Health item - increases your pet's health by 25%
 --- !u!1 &2134741913
 GameObject:
   m_ObjectHideFlags: 0

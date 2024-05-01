@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
-using TMPro;
 
 public class InventoryManagerScript : MonoBehaviour
 {
@@ -18,11 +17,11 @@ public class InventoryManagerScript : MonoBehaviour
         inventoryItems[1, 4] = 4;
         inventoryItems[1, 5] = 5;
         // Stat increase
-        inventoryItems[2, 1] = 30;
-        inventoryItems[2, 2] = 15;
-        inventoryItems[2, 3] = 10;
-        inventoryItems[2, 4] = 20;
-        inventoryItems[2, 5] = 25;
+        inventoryItems[2, 1] = 40;   // Sushi
+        inventoryItems[2, 2] = 15;   // Apple
+        inventoryItems[2, 3] = 20;   // Candy
+        inventoryItems[2, 4] = 30;   // Coffee
+        inventoryItems[2, 5] = 25;   // Medicine
         //Quantity
         inventoryItems[3, 1] = 0;
         inventoryItems[3, 2] = 0;
@@ -45,6 +44,7 @@ public class InventoryManagerScript : MonoBehaviour
                 if (HealthManager.healthValue < 100)
                 {
                     HealthManager.healthValue += inventoryItems[2, CurrentButton.GetComponent<ButtonInventoryUpdate>().ItemID];
+                    HappinessManager.happinessValue += 20;
                 }
             }
             else
@@ -52,6 +52,7 @@ public class InventoryManagerScript : MonoBehaviour
                 if (FoodManager.foodValue < 100)
                 {
                     FoodManager.foodValue += inventoryItems[2, CurrentButton.GetComponent<ButtonInventoryUpdate>().ItemID];
+                    HappinessManager.happinessValue += 20;
                 }
             }
         }

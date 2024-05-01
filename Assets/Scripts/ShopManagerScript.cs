@@ -17,11 +17,11 @@ public class ShopManagerScript : MonoBehaviour
         shopItems[1, 4] = 4;
         shopItems[1, 5] = 5;
         // Price
-        shopItems[2, 1] = 12;
-        shopItems[2, 2] = 5;
-        shopItems[2, 3] = 8;
-        shopItems[2, 4] = 10;
-        shopItems[2, 5] = 15;
+        shopItems[2, 1] = 10;   // Sushi
+        shopItems[2, 2] = 3;    // Apple
+        shopItems[2, 3] = 5;    // Candy
+        shopItems[2, 4] = 8;    // Coffee
+        shopItems[2, 5] = 15;   // Medicine
         //Quantity
         shopItems[3, 1] = 99;
         shopItems[3, 2] = 99;
