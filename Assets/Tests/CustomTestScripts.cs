@@ -45,7 +45,7 @@ public class TestScriptExpansion
         // Arrange
         int[] ints = { 1, 2, 3, 4, 5, 6 };
         int result = 0;
-     
+
         // Act
         for (int i = 0; i < ints.Length; i++) 
             result += ints[i];
