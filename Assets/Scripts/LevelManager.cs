@@ -12,6 +12,7 @@ public class LevelManager : MonoBehaviour
 public class MusicController : MonoBehaviour
 {
     private AudioSource backgroundMusic;
+    private AudioSource mainMenuMusic;
 
     private void Start()
     {
