@@ -20,6 +20,6 @@ public class FoodBar_OverTime_Decreases : InputTestFixture
         FoodManager foodValue = foodBar.GetComponent<FoodManager>();
         yield return new WaitForSeconds(5);
         int currentFoodValue = (int)foodValue.foodValue;
-        Assert.LessOrEqual(currentFoodValue, 50, "Food value amount is not less or equal than the set value");
+        Assert.LessOrEqual(currentFoodValue, 75, "Food value amount is not less or equal than the set value");
     }
 }

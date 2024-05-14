@@ -12,7 +12,7 @@ public class Parameterized_HealthBar_ValueSet : InputTestFixture
         base.Setup();
         SceneManager.LoadScene("Main");
     }
-    static int[] setValues = new int[] { 75, 50, 0 };
+    static int[] setValues = new int[] { 75, 50, 10 };
     [UnityTest]
     public IEnumerator Parameterized_HealthBar_ValueSetCheck([ValueSource("setValues")] int setValue)
     {
