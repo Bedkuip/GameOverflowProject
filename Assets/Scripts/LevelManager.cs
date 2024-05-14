@@ -12,7 +12,10 @@ public class LevelManager : MonoBehaviour
 public class MusicController : MonoBehaviour
 {
     private AudioSource backgroundMusic;
+<<<<<<< HEAD
     private AudioSource mainMenuMusic;
+=======
+>>>>>>> parent of f945a7c (Bedkuip/CodeAnalyserBranch(breaks-game-audio))
 
     private void Start()
     {
