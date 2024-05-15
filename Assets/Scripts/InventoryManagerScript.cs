@@ -8,6 +8,7 @@ public class InventoryManagerScript : MonoBehaviour
     public FoodManager FoodManager;
     public HealthManager HealthManager;
     public HappinessManager HappinessManager;
+    public GameObject FloatingText;
     void Start()
     {
         // ID
@@ -42,21 +43,29 @@ public class InventoryManagerScript : MonoBehaviour
         if (inventoryItems[3, CurrentButton.GetComponent<ButtonInventoryUpdate>().ItemID] > 0)
         {
             inventoryItems[3, CurrentButton.GetComponent<ButtonInventoryUpdate>().ItemID]--;
+            // Popup text
+            GameObject floatingText = Instantiate(FloatingText, transform.position, Quaternion.identity) as GameObject;
+            GameObject floatingText2 = Instantiate(FloatingText, transform.position, Quaternion.identity) as GameObject;
             if (CurrentButton.GetComponent<ButtonInventoryUpdate>().ItemID == 5 || CurrentButton.GetComponent<ButtonInventoryUpdate>().ItemID == 6)
             {
-                if (HealthManager.healthValue < 100)
-                {
-                    HealthManager.healthValue += inventoryItems[2, CurrentButton.GetComponent<ButtonInventoryUpdate>().ItemID];
-                    HappinessManager.happinessValue += 20;
-                }
+                HealthManager.healthValue += inventoryItems[2, CurrentButton.GetComponent<ButtonInventoryUpdate>().ItemID];
+                HappinessManager.happinessValue += 20;
+                floatingText.transform.localPosition += new Vector3(0, 100f, 0);
+                floatingText.transform.GetChild(0).GetComponent<TextMesh>().color = new Color32(250, 102, 150, 255);
+                floatingText.transform.GetChild(0).GetComponent<TextMesh>().text = "+" + inventoryItems[2, CurrentButton.GetComponent<ButtonInventoryUpdate>().ItemID].ToString();
+                floatingText2.transform.localPosition += new Vector3(0, -100f, 0);
+                floatingText2.transform.GetChild(0).GetComponent<TextMesh>().color = new Color32(244, 235, 137, 255);
+                floatingText2.transform.GetChild(0).GetComponent<TextMesh>().text = "+" + 20.ToString();
             }
             else
             {
-                if (FoodManager.foodValue < 100)
-                {
-                    FoodManager.foodValue += inventoryItems[2, CurrentButton.GetComponent<ButtonInventoryUpdate>().ItemID];
-                    HappinessManager.happinessValue += 20;
-                }
+                FoodManager.foodValue += inventoryItems[2, CurrentButton.GetComponent<ButtonInventoryUpdate>().ItemID];
+                HappinessManager.happinessValue += 20;
+                floatingText.transform.GetChild(0).GetComponent<TextMesh>().color = new Color32(132, 77, 57, 255);
+                floatingText.transform.GetChild(0).GetComponent<TextMesh>().text = "+" + inventoryItems[2, CurrentButton.GetComponent<ButtonInventoryUpdate>().ItemID].ToString();
+                floatingText2.transform.localPosition += new Vector3(0, -100f, 0);
+                floatingText2.transform.GetChild(0).GetComponent<TextMesh>().color = new Color32(244, 235, 137, 255);
+                floatingText2.transform.GetChild(0).GetComponent<TextMesh>().text = "+" + 20.ToString();
             }
         }
     }
