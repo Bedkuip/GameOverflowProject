@@ -6669,6 +6669,8 @@ MonoBehaviour:
   HealthManager: {fileID: 1509601142}
   FoodManager: {fileID: 961197712}
   HappinessManager: {fileID: 556594094}
+  revertDelay: 1
+  previousFoodValue: 0
 --- !u!212 &869941540
 SpriteRenderer:
   m_ObjectHideFlags: 0

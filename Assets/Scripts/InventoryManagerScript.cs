@@ -40,6 +40,8 @@ public class InventoryManagerScript : MonoBehaviour
     public void Use()
     {
         GameObject CurrentButton = GameObject.FindGameObjectWithTag("Event").GetComponent<EventSystem>().currentSelectedGameObject;
+
+
         if (inventoryItems[3, CurrentButton.GetComponent<ButtonInventoryUpdate>().ItemID] > 0)
         {
             inventoryItems[3, CurrentButton.GetComponent<ButtonInventoryUpdate>().ItemID]--;
